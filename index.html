@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Su kien chuot</title>
+
+</head>
+<body>
+<form>
+    <img id="bong" src="bong.jpg" height="194" width="259"/>
+    <p> Click button below to move the img </p>
+    <input type="button" value="click me" onclick="moveright();"/>
+    <input type="button" value="click me " onclick="moveleft();"/>
+</form>
+
+<script>
+    let imgboj =null;
+    imgboj = document.getElementById('bong');
+    function init() {
+        imgboj = document.getElementById('bong');
+        imgboj.style.position = 'relative';
+        imgboj.style.left = '10px';
+    }
+    function moveright() {
+        imgboj.style.left = parseInt(imgboj.style.left) + 10 + 'px';
+    }
+    function moveleft() {
+        imgboj.style. left= parseInt(imgboj.style.left) + -10 + 'px';
+    }
+    window.onload = init;
+
+</script>
+</body>
+</html>
